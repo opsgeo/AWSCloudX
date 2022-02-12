@@ -32,7 +32,7 @@ resource "aws_iam_access_key" "eva" {
   user = "${aws_iam_user.adam.name}"
 }
 
-resource "aws_iam_user_policy_attachment" "eva_s3full" {
+resource "aws_iam_user_policy_attachment" "eva_s3Read" {
   user = "${aws_iam_user.eva.name}"
   policy_arn = "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess" 
 }  
